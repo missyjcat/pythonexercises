@@ -56,7 +56,10 @@ def both_ends(s):
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
   # +++your code here+++
-  return
+  firstChar = s[0:1] ## get the first character
+  beheadedString = s[1:] ## get the rest of the string
+  beheadedString = beheadedString.replace(firstChar, '*') ## replace rest of string's instances of first character with star
+  return firstChar + beheadedString ## return first char plus rest of string
 
 
 # D. MixUp
@@ -68,7 +71,9 @@ def fix_start(s):
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
   # +++your code here+++
-  return
+  aMod = b[0:2] + a[2:]
+  bMod = a[0:2] + b[2:]
+  return aMod + ' ' + bMod
 
 
 # Provided simple test() function used in main() to print
