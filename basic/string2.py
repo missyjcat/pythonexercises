@@ -36,7 +36,14 @@ def verbing(s):
 # This dinner is good!
 def not_bad(s):
   # +++your code here+++
-  return
+  locationOfNot = s.find('not')
+  locationOfBad = s.find('bad')
+  if locationOfBad > locationOfNot and locationOfNot != -1 and locationOfBad != -1:
+    cutOut = s[locationOfNot:locationOfBad + 3]
+    newString = s.replace(cutOut, 'good')
+    return newString
+  else:
+    return s
 
 
 # F. front_back
@@ -48,6 +55,15 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
   # +++your code here+++
+  def findMiddle(s):
+    if len(s)%2 == 1:
+      indexHalf = len(s)/2 - 1.5
+    else:
+      indexHalf = len(s)/2
+    return indexHalf
+  middleA = findMiddle(a)
+  middleB = findMiddle(b)
+  
   return
 
 
