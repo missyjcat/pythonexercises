@@ -57,7 +57,7 @@ def front_back(a, b):
   # +++your code here+++
   def findMiddle(s):
     if len(s)%2 == 1:
-      indexHalf = int(float(len(s))/2 - 0.5)
+      indexHalf = int(float(len(s))/2 + 0.5)
     else:
       indexHalf = len(s)/2
     return indexHalf
